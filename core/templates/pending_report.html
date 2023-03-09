@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../static/dist/output.css">
+</head>
+<body>
+    <h1 class="text-4xl text-center">PENDING APPROVAL</h1>
+
+    {% if person %}
+        {% for record in person %}
+            <p>{{record.first_name}}</p>
+            <p>{{record.second_name}}</p>
+            <p>{{record.date_of_birth}}</p>
+            <p>{{record.phone_number}}</p>
+            <p>{{record.email}}</p>
+        {% endfor %}
+    {% else %}
+        <p>NO NEW MEMBERSHIP REQUESTS!</p>
+    {% endif %}
+
+    <h2>APPROVED MEMBERS</h2>
+    {% if members %}
+        {% for member in members %}
+            <p>{{member.registration.first_name}}</p>
+            <p>{{member.joined_on}}</p>
+        {% endfor %}
+    {% else %}
+        <p>NOTHING TO SEE HERE</p>
+    {% endif %}
+</body>
+</html>

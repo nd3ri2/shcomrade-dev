@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/dist/output.css">
+</head>
+<body>
+    <h1 class="text-4xl text-center">INVESTMENTS</h1>
+    {% if invest %}
+        {% for investment in invest %}
+            <p>{{ investment.investment_name }}</p>
+            <p>{{ investment.invested_on}}</p>
+            <p>{{ investment.amount_invested}}</p>
+            <p>{{ investment.investment_rate }}</p>
+        {% endfor %}
+    {% else %}
+            <p>FRANK!</p>
+    {% endif %}
+</body>
+</html>
