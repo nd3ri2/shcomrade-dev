@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Dashboard</title>
+    <!-- Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="{% static 'dist/dashboard.css' %}">
+    <link rel="stylesheet" type="text/css" href=".{% static 'dist/style.css' %}">
+    <link rel="stylesheet" href="{% static 'dist/output.css' %}">
+</head>
+<body class="md:h-[100vh] bg-slate-100">
+    <div class="flex flex-row justify-between flex-grow">
+        <div>
+            <div class="mb-3">
+                <h2 class="font-extrabold text-3xl mt-6 mb-0 ml-7">Pick Up Where You Left Off</h2>
+                <h4 class="font-extralight text-1xl ml-7">Dashboard</h4>
+            </div>
+            <div class="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:grid-cols-4 md:gap-4 mx-7 mb-5">
+                <div class="bg-orange-400 text-white border-black rounded-lg shadow-lg text-center p-8">
+                    <h6 class="text-md font-bold font-['Poppins']">Total Contributions</h6>
+                    <br>
+                    <p class="font-mono">KES {{ contrib }}</p>
+                </div>
+                <div class="bg-lime-300 text-white border-black rounded-lg shadow-lg text-center p-8">
+                    <h6 class="text-md font-bold font-['Poppins']">My Contributions</h6>
+                    <br>
+                    <p class="font-mono">KES {{ mine }}</p>
+                </div>
+                <div class="bg-emerald-400 text-white border-black rounded-lg shadow-lg text-center p-8">
+                    <h6 class="text-md font-bold font-['Poppins']">Total Revenue</h6>
+                    <br>
+                    <p class="font-mono">KES {{ revenue }}</p>
+                </div>
+                <div class="bg-purple-400 text-white border-black rounded-lg shadow-lg text-center p-8">
+                    <h6 class="text-md font-bold font-['Poppins']">My Total Shares</h6>
+                    <br>
+                    <p class="font-mono">KES {{ shares }}</p>
+                </div>
+                <div class="bg-cyan-700 text-white border-black rounded-lg shadow-lg text-center p-8">
+                    <h6 class="text-md font-bold font-['Poppins']">Total Returns</h6>
+                    <br>
+                    <p class="font-mono">KES {{ returns }}</p>
+                </div>
+                <div class="bg-red-400 text-white border-black rounded-lg shadow-lg text-center p-8">
+                    <h6 class="text-md font-bold font-['Poppins']">Pending Contributions</h6>
+                    <br>
+                    <p class="font-mono">KES {{ arrears }}</p>
+                </div>
+                <!--div class="bg-sky-300 text-white border-black rounded-lg shadow-lg text-center p-8 hover:bg-slate-50 hover:text-black hover:cursor-pointer">
+                    <h6 class="text-md font-bold font-['Poppins']">Make Contribution</h6>
+                    <br>
+                    <p class="font-mono"><i class="box-arrow-up-right"></i>
+                    </p>
+                </div-->
+            </div>
+        </div>
+        <div class="hidden md:bg-gradient-to-l md:from-[rgb(116,62,227)] md:to-[rgba(246,110,26,1)] md:block md:h-[100vh] md:pl-16 sm:pr-8">
+            <div class="user-container">
+                <div class="text-5xl font-['Poppins'] font-bold"><h3>Hello, {{ member.registration.first_name }}</h3></div>
+            </div>
+            <div class="menu-items">
+                <h6>Menu</h6>
+                <ul>
+                    <!--li><a href="accountinfo.html">Account</a></li>
+                    <li>Send Feedback</li>
+                    <li>Generate Reports</li>
+                    <li>Active Projects</li-->
+                    <li><a href="{% url 'core:index' %}">Log Out</a></li>
+                </ul>
+            </div>
+            <div class="textbox-bottom">
+                <p>Want any help? <a href="#">Contact Us</a></p>
+                <div class="copyright">
+                    <p>&#169 Schcomrade Chama, 2023</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

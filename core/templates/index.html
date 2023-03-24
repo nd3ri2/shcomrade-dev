@@ -1,44 +1,51 @@
+{% load static %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link href="../static/dist/output.css" rel="stylesheet"> <!-- Tailwind CSS IMPORT STATEMENT -->
+    <title>Sign Up - Shcomrade Chama.</title>
+    <!--Bootstrap Library Links-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"  integrity="sha384ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--FontAwesome CDN Link-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome-free-5.15.3-web/css/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome-free-5.15.3-web/css/fontawesome.css">
+    <!--CSS File-->
+    <link rel="stylesheet" type="text/css" href="{% static 'dist/style.css'%}">
+    <link rel="stylesheet" href="{% static 'dist/output.css' %}">
+    <link rel="icon" href="" type="image/png">
 </head>
-<body>
-    <h1 class="p-5 bg-gradient-to-r from-fuchsia-300 to-emerald-500 shadow-lg font-serif">SHCOMRADE DATABASE MANAGEMENT SYSTEM</h1>
-
-    <div class="wrapper flex my-4 mx-2 space-x-2">
-        <div class="card border border-black p-4 bg-slate-100 shadow-md hover:text-white hover:bg-slate-900">
-            <div>
-                <h3 class="font-serif text-2xl font-bold">Add a new member</h3>
-                <hr>
-            </div>
-            <div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, voluptatem.</p>
-            </div>
+<body class="bg-no-repeat bg-cover h-[100vh]">
+        <div class="flex flex-row justify-center align-middle">
+            <div class="hidden md:flex md:flex-col bg-gradient-to-r from-[rgb(116,62,227)] to-[rgba(246,110,26,1)] md:justify-center md:w-[100%] md:rounded md:rounded-r-lg md:items-center md:h-[100vh]">
+                <div>
+                    <div class="font-['Poppins'] text-white text-center">
+                        <h2 class="text-6xl font-extrabold max-w-prose">Shcomrade<br>Chama</h2>
+                        <p class="text-sm font-medium">Digital Chama System</p>
+                    </div>
+                </div>
+            </div> <!--Left Half-->
+            <div class="flex flex-col w-[100%] items-center justify-center">
+                    <div class="font-['Poppins']">
+                        <h2 class="text-3xl text-white p-5 font-extrabold">Hello Again</h2>
+                        <form method="post" class="login text-indigo-300">
+                            {% crispy form form.helper %}
+                        </form>
+                    </div>
+                    <div class="form-field">
+                        <p>Are you new here? <a href="signup.html">Sign Up</a></p>
+                    </div>
+                </div>
+                    
+                
+            </div> <!--Right Half-->
         </div>
-        <div class="card border border-black p-4 bg-slate-100 shadow-md hover:text-white hover:bg-slate-900">
-            <div>
-                <h3 class="font-serif text-2xl font-bold">Record New Transaction</h3>
-                <hr>
-            </div>
-            <div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, voluptatem.</p>
-            </div>
-        </div>
-        <div class="card border border-black p-4 bg-slate-100 shadow-md hover:text-white hover:bg-slate-900">
-            <div>
-                <h3 class="font-serif text-2xl font-bold">Generate a report</h3>
-                <hr>
-            </div>
-            <div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, voluptatem.</p>
-            </div>
-        </div>
-    </div>
+    
+    
 </body>
 </html>

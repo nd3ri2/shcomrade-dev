@@ -1,0 +1,20 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where are you going, shcomrade?</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'dist/output.css' %}">
+    <link rel="stylesheet" href="{% static 'dist/style.css' %}">
+</head>
+<body>
+    <h1>Leaving so soon, Will?</h1>
+    <form method="post" action="">
+        {% crispy_form form %}
+    </form>
+</body>
+</html>

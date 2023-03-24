@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;800&display=swap');
+/*Sign Up and Log In*/
+
+body {
+    background-image: url(background.jpg);
+}
+
+.login div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.left-half{
+    background: rgb(116,62,227);
+    background: linear-gradient(90deg, rgba(116,62,227,1) 0%, rgba(246,110,26,1) 100%);
+    justify-content: center;
+    width: 100%;
+    border-radius: 0px 30px 30px 0px;
+    padding-top: 25%;
+    padding-bottom: 25%;
+}
+
+.left-half h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 56px;
+    text-align: center;
+    color:white;
+}
+.right-half h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    text-align: center;
+    color:white;
+}
+.left-half p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    align-items: center;
+    border-radius: 25px;
+}
+
+div.main-container > div{
+    margin:10px;
+    height: 100%;
+}
+
+
+.right-half{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.form-field{
+    align-items: center;
+    text-align: center;
+}
+
+
+div.rounded-box{
+    background: white;
+    border-radius: 25px;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+}
+.row{
+    padding: 10px;
+    margin-top: 2px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.form-inputField{
+    border-radius: 20px;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    height: 54px;
+    width: 454px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+
+}
+
+.button-container{
+    text-align: center;
+    padding: 50px;
+}
+.centre-button{
+    border-radius: 50px;
+    background-color: #f66e1a;
+    border: none;
+    margin: 2px;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 13.4px;
+    height: 66px;
+    width: 179px;
+}
+.submit-btn{
+    border-radius: 50px;
+    background-color: #743ee3;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    margin: 5px;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 13.4px;
+    color: white;
+    height: 66px;
+    width: 179px;
+
+}
+.centre-text-container{
+    text-align: center;
+}
+
+.form-field a{
+    text-decoration-color: white;
+}
+.form-field a:hover{
+    color: #f66e1a;
+    text-decoration: #f66e1a;
+    font-weight: 800;
+}
+.form-field p{
+    color: white;
+}
+/*End of Sign Up and Log In*/ 
+
+/*Dashboard*/

@@ -9,7 +9,7 @@ Welcome to Shcomrade Database Management System! This project is designed to hel
 
 ## Installation
 1. Clone this repository
-2. Activate the virtual environment `comvenv` using `> comvenv/bin/activate` (ensure you have python installed on your computer!)
+2. Activate the virtual environment `comvenv` using `> comvenv/bin/activate` (ensure you have python v.3.10 installed on your computer!)
 3. Install dependencies: `pip install -r requirements.txt`
 4. Run migrations: `python manage.py migrate` (The database comes with the migrations already done, you may skip this step)
 5. Start the server with `python manage.py runserver
